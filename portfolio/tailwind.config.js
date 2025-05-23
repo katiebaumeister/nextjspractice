@@ -7,6 +7,9 @@ module.exports = {
           950: '#0b0b0f',
         },
       },
+      fontFamily: {
+        mono: ['"IBM Plex Mono"', 'monospace'],
+      },
     },
   },
   plugins: [],
