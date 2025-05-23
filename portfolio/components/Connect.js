@@ -33,7 +33,7 @@ export default function Connect() {
           </a>
         </div>
 
-        <p className="text-large sm:text-2xl text-neutral-400">
+        <p className="text-lg sm:text-xl text-neutral-400">
           Email me:{' '}
           <a
             href="mailto:kate@learnadoodle.com"
