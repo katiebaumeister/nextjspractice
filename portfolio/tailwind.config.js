@@ -8,7 +8,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['Outfit', 'sans-serif'],
       },
     },
   },
