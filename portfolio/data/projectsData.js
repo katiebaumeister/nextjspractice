@@ -1,15 +1,15 @@
 export const projectsData = [
   {
     emoji: "⚙️",
-    title: "Developer – Booz Allen Hamilton",
+    title: "Full-time Developer",
     location: "Washington, DC",
     dates: "May 2024 – Present",
-    short: "Automating military workflows using Power Platform and Automate.",
+    short: "Automating workflows using Power Platform and Automate.",
     long: "I build modern replacements for legacy Army systems using Microsoft Power Platform. My solutions integrate cloud services into mission workflows, streamlining operations for strategic defense clients."
   },
   {
     emoji: "🖥️",
-    title: "Technical Workflow Automation",
+    title: "Technical Workflow Automation Project",
     location: "Washington, DC",
     dates: "Jul 2024",
     short: "Automated mass PDF conversion using PowerShell.",
@@ -17,7 +17,7 @@ export const projectsData = [
   },
   {
     emoji: "🎓",
-    title: "Study Abroad – ESCP Business School, Paris",
+    title: "Brief stint in Paris",
     location: "Paris, France",
     dates: "Dec 2023 – Mar 2024",
     short: "Studied future-focused business trends at the world's first business school.",
@@ -25,7 +25,7 @@ export const projectsData = [
   },
   {
     emoji: "💼",
-    title: "VP – Graduate Women in Business",
+    title: "Vice President of Graduate Women in Business",
     location: "Columbia, South Carolina",
     dates: "Aug 2023 – May 2024",
     short: "Led leadership events to support women in MBA programs.",
@@ -33,7 +33,7 @@ export const projectsData = [
   },
   {
     emoji: "📈",
-    title: "MBA Intern – WJ Partners",
+    title: "MBA Intern for WJ Partners",
     location: "Columbia, South Carolina",
     dates: "Jul – Nov 2023",
     short: "Conducted market research and modeling for a PE firm.",
@@ -41,7 +41,7 @@ export const projectsData = [
   },
   {
     emoji: "🧩",
-    title: "Corporate Development Intern – Everest Insurance®",
+    title: "Corporate Development Intern for Everest Insurance®",
     location: "New York, New York",
     dates: "May – Jul 2023",
     short: "Supported M&A strategy and product innovation.",
@@ -49,7 +49,7 @@ export const projectsData = [
   },
   {
     emoji: "🎥",
-    title: "Strategy Lead – Local Cinema Brand",
+    title: "Strategy Lead for Local Cinema Brand",
     location: "Columbia, South Carolina",
     dates: "Jan – May 2023",
     short: "Led branding and outreach for a regional film initiative.",
@@ -57,7 +57,7 @@ export const projectsData = [
   },
   {
     emoji: "🧠",
-    title: "Religious Economy – Scientology Essay",
+    title: "Research on \"Unprecedented Transnational Growth and Rampant Capitalism within the Religious Economy\"",
     location: "Columbia, South Carolina",
     dates: "Feb 2023",
     short: "Written before AI.",
