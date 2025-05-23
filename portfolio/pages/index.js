@@ -1,3 +1,22 @@
+import Head from 'next/head';
+import Hero from '../components/Hero';
+import Projects from '../components/Projects';
+import Footer from '../components/Footer';
+import Connect from '../components/Connect';
+
 export default function Home() {
-  return <h1 style={{ color: 'white', textAlign: 'center', marginTop: '50vh' }}>🚀 Site is Working!</h1>;
+  return (
+    <>
+      <Head>
+        <title>Kate Baumeister</title>
+        <meta name="description" content="Creative engineer + AI builder" />
+      </Head>
+      <main className="flex flex-col min-h-screen bg-neutral-950 text-white">
+        <Hero />
+        <Projects />
+        <Connect />
+        <Footer />
+      </main>
+    </>
+  );
 }
