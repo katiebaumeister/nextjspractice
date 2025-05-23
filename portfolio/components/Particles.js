@@ -41,4 +41,11 @@ export default function Particles() {
             className="absolute bg-white rounded-full opacity-10 w-[2px] h-[2px] animate-pulse"
             style={{
               left: `${(left + x * 0.05) % windowWidth}px`,
-
+              top: `${(top + y * 0.05) % windowHeight}px`,
+            }}
+          />
+        );
+      })}
+    </div>
+  );
+}
