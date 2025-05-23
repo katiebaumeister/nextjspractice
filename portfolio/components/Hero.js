@@ -17,7 +17,7 @@ export default function Hero() {
       >
         Kate Baumeister
       </motion.h1>
-      <p className="mt-8 text-base sm:text-lg text-neutral-400 max-w-md">
+      <p className="mt-8 text-sm sm:text-base text-neutral-400 max-w-md">
         I build apps for the government. Spending evenings building <br />
         learnadoodle.com.
       </p>
