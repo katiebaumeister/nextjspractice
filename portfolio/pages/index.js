@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Head>
         <title>Kate Baumeister</title>
-        <meta name="description" content="Creative engineer + AI builder" />
+        <meta name="description" content="Engineer." />
         <link rel="prefetch" href="/projects" />
         <link rel="prefetch" href="/contact" />
       </Head>
