@@ -34,7 +34,7 @@ export default function Connect() {
         </div>
 
         <p className="text-lg sm:text-xl text-neutral-400">
-          Email me:{' '}
+          If you wanna talk business:{' '}
           <a
             href="mailto:kate@learnadoodle.com"
             className="underline hover:text-white transition"
