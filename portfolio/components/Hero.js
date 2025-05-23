@@ -3,6 +3,10 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <div className="mb-6 flex space-x-6 text-sm text-neutral-400">
+        <a href="/projects" className="hover:text-white transition">Projects</a>
+        <a href="/contact" className="hover:text-white transition">Contact</a>
+      </div>
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
