@@ -4,7 +4,7 @@ export default function Connect() {
   return (
     <section className="py-24 px-4 border-t border-neutral-800">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-4">Let’s Connect</h2>
+        <h2 className="text-4xl font-semibold mb-4">Let’s Connect</h2>
         <p className="text-neutral-400 mb-6"> </p>
         <div className="flex justify-center space-x-6 mb-10 text-2xl">
           <a href="https://x.com/katebaumeister" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400"><FaTwitter /></a>
