@@ -5,6 +5,10 @@ import Link from 'next/link';
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <div className="mb-10 flex flex-wrap justify-center space-x-8 text-sm sm:text-base font-medium text-neutral-400">
+        <Link href="/projects" className="hover:text-white transition duration-200">Projects</Link>
+        <Link href="/contact" className="hover:text-white transition duration-200">Contact</Link>
+      </div>
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
