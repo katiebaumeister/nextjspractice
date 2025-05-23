@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Hero from '../components/Hero';
-import Projects from '../components/Projects';
 import Footer from '../components/Footer';
-import Connect from '../components/Connect';
 import Nav from '../components/Nav';
 import Background from '../components/Background';
 
@@ -17,8 +15,6 @@ export default function Home() {
         <Background />
         <Nav />
         <Hero />
-        <Projects />
-        <Connect />
         <Footer />
       </main>
     </>
