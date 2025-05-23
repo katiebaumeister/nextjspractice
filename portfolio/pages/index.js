@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>Kate Baumeister</title>
-        <meta name="description" content="Creative engineer + AI builder" />
+        <meta name="description" content="building things for good" />
       </Head>
       <main className="flex flex-col min-h-screen bg-neutral-950 text-white">
         <Hero />
