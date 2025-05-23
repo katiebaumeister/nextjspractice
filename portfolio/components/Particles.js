@@ -17,25 +17,28 @@ export function useMousePosition() {
 }
 
 export default function Particles() {
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
   const { x, y } = useMousePosition();
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    setWindowHeight(window.innerHeight);
+  }, []);
+
   const dots = new Array(40).fill(0);
+
+  if (!windowWidth || !windowHeight) return null;
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
       {dots.map((_, i) => {
-        const left = Math.random() * window.innerWidth;
-        const top = Math.random() * window.innerHeight;
+        const left = Math.random() * windowWidth;
+        const top = Math.random() * windowHeight;
         return (
           <div
             key={i}
             className="absolute bg-white rounded-full opacity-10 w-[2px] h-[2px] animate-pulse"
             style={{
-              left: `${(left + x * 0.05) % window.innerWidth}px`,
-              top: `${(top + y * 0.05) % window.innerHeight}px`,
-            }}
-          />
-        );
-      })}
-    </div>
-  );
-}
+              left: `${(left + x * 0.05) % windowWidth}px`,
+
