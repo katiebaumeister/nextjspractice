@@ -15,10 +15,17 @@ export const projectsData = [
     short: "Automated mass PDF conversion using PowerShell.",
     long: "Designed a script to convert hundreds of PowerPoint decks to PDFs for internal reporting. Developed process automation skills, optimized legacy data practices, and supported firm-wide knowledge management."
   },
+  emoji: "🎓",
+    title: "Study Abroad – ESCP Business School, Paris",
+    location: "Paris, France",
+    dates: "Dec 2023 – Mar 2024",
+    short: "Studied future-focused business trends at the world's first business school.",
+    long: "Completed coursework in \"Neuroscience and Leadership\" and \"From E-Business to Me-Business\" at ESCP, the original business school founded in 1819. This immersive program expanded my perspective on global innovation and human-centered strategy."
+  },
   {
     emoji: "💼",
     title: "VP – Graduate Women in Business",
-    location: "University of South Carolina",
+    location: "Columbia, South Carolina",
     dates: "Aug 2023 – May 2024",
     short: "Led leadership events to support women in MBA programs.",
     long: "Organized panels, mentorships, and career development sessions for women. Fostered inclusive professional networks and championed gender equity in business."
@@ -26,7 +33,7 @@ export const projectsData = [
   {
     emoji: "📈",
     title: "MBA Intern – WJ Partners",
-    location: "South Carolina",
+    location: "Spartanburg, South Carolina",
     dates: "Jul – Nov 2023",
     short: "Conducted market research and modeling for a PE firm.",
     long: "I developed financial models and advised on investment strategy, supporting local business growth. I also explored deal sourcing and due diligence, contributing to a hands-on, generalist investing experience."
@@ -34,7 +41,7 @@ export const projectsData = [
   {
     emoji: "🧩",
     title: "Corporate Development Intern – Everest Re Group",
-    location: "Remote",
+    location: "New York, New York",
     dates: "May – Jul 2023",
     short: "Supported M&A strategy and product innovation.",
     long: "Worked closely with senior leadership on acquisition targets and market growth. My competitive landscape analyses informed executive decisions and long-term global strategy."
@@ -42,7 +49,7 @@ export const projectsData = [
   {
     emoji: "🎥",
     title: "Strategy Lead – Local Cinema Brand",
-    location: "South Carolina",
+    location: "Columbia, South Carolina",
     dates: "Jan – May 2023",
     short: "Led branding and outreach for a regional film initiative.",
     long: "Created a strategic plan leveraging merchandise, partnerships, and social media to increase visibility and secure a $100K local government grant. Built a bridge between cultural growth and economic policy through storytelling."
@@ -50,7 +57,7 @@ export const projectsData = [
   {
     emoji: "🧠",
     title: "Unpredencted Transnational Growth and Rampant Capitalism within the Religious Economy",
-    location: "Columbia, SC",
+    location: "Columbia, South Carolina",
     dates: "Feb 2023",
     short: "Written before AI.",
     long: "Abstact: This essay analyzes how the bait-and-switch organization centered around a fear-inducing-evil-galactic-overlord, Xenu, his spacecraft, and exploding volcanoes manages to overcome dozens of external imperatives including litigations for extortion, coercion, tax evasion, and falsification of records to continually recruit high-profile investors and still, to date, operate in over one hundred nations, according to the Church of Scientology International online. Despite a shrinking number of subscribers and increasing media exposure critiquing the legitimacy of the religion, its wealth continues to rise with a complex economic model blocking opponents from chasing its finances (Kent, 2011). So, how does this house of cards stay standing? Please note, for the purposes of analysis within this essay, The Church of Scientology and its subsidiaries will be assumed as a charlatan, profit-making business."
@@ -58,7 +65,7 @@ export const projectsData = [
   {
     emoji: "🌐",
     title: "Cultural Competitiveness Research – Switzerland",
-    location: "Europe",
+    location: "Columbia, South Carolina",
     dates: "Oct 2022",
     short: "Analyzed how culture impacts economic outcomes (Also written before AI).",
     long: "Studied the roles of Hofstede and GLOBE cultural dimensions (e.g., power distance, individualism) on global competitiveness. Added regional insights by comparing corruption's effect on Northern vs. Southern Italy investments."
@@ -66,7 +73,7 @@ export const projectsData = [
   {
     emoji: "🌍",
     title: "Research Assistant – International Business",
-    location: "University of South Carolina",
+    location: "Columbia, South Carolina",
     dates: "Apr 2022 – Apr 2024",
     short: "Cleaned and structured massive datasets for global health investment trends.",
     long: "Using Refinitiv, Python, and Excel macros, I processed hundreds of disparate datasets to surface investment success patterns. My work helped shape strategic decisions for a private health-tech fund, blending analytics with human-centered investment logic."
