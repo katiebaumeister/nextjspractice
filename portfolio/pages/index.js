@@ -22,7 +22,6 @@ export default function Home() {
       <main className="relative overflow-hidden flex flex-col min-h-screen text-white scroll-smooth">
         <Background />
         <Particles />
-        <Nav />
         <Hero />
         <Footer />
       </main>
