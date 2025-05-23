@@ -1,16 +1,16 @@
 export const projectsData = [
   {
     emoji: "⚙️",
-    title: "AI Developer – Booz Allen Hamilton",
-    location: "Remote",
+    title: "Developer – Booz Allen Hamilton",
+    location: "Washington, DC",
     dates: "May 2024 – Present",
     short: "Automating military workflows using Power Platform and Automate.",
     long: "I build modern replacements for legacy Army systems using Microsoft Power Platform. My solutions integrate cloud services into mission workflows, streamlining operations for strategic defense clients."
   },
   {
     emoji: "🖥️",
-    title: "Technical Workflow Automation – Booz Allen (internal)",
-    location: "Remote",
+    title: "Technical Workflow Automation",
+    location: "Washington, DC",
     dates: "Jul 2024",
     short: "Automated mass PDF conversion using PowerShell.",
     long: "Designed a script to convert hundreds of PowerPoint decks to PDFs for internal reporting. Developed process automation skills, optimized legacy data practices, and supported firm-wide knowledge management."
@@ -33,7 +33,7 @@ export const projectsData = [
   },
   {
     emoji: "🧩",
-    title: "Corporate Development Intern – Everest Insurance®",
+    title: "Corporate Development Intern – Everest Re Group",
     location: "Remote",
     dates: "May – Jul 2023",
     short: "Supported M&A strategy and product innovation.",
@@ -49,18 +49,18 @@ export const projectsData = [
   },
   {
     emoji: "🧠",
-    title: "Religious Economy – Scientology Essay",
-    location: "Remote",
+    title: "Unpredencted Transnational Growth and Rampant Capitalism within the Religious Economy",
+    location: "Columbia, SC",
     dates: "Feb 2023",
-    short: "Investigated religion as a business model.",
-    long: "Through a provocative analysis of Scientology, I examined how narrative, legal insulation, and fear-based recruitment drive economic survival. This piece explores religious capitalism and organizational resilience through an unorthodox lens."
+    short: "Written before AI.",
+    long: "Abstact: This essay analyzes how the bait-and-switch organization centered around a fear-inducing-evil-galactic-overlord, Xenu, his spacecraft, and exploding volcanoes manages to overcome dozens of external imperatives including litigations for extortion, coercion, tax evasion, and falsification of records to continually recruit high-profile investors and still, to date, operate in over one hundred nations, according to the Church of Scientology International online. Despite a shrinking number of subscribers and increasing media exposure critiquing the legitimacy of the religion, its wealth continues to rise with a complex economic model blocking opponents from chasing its finances (Kent, 2011). So, how does this house of cards stay standing? Please note, for the purposes of analysis within this essay, The Church of Scientology and its subsidiaries will be assumed as a charlatan, profit-making business."
   },
   {
     emoji: "🌐",
     title: "Cultural Competitiveness Research – Switzerland",
     location: "Europe",
     dates: "Oct 2022",
-    short: "Analyzed how culture impacts economic outcomes.",
+    short: "Analyzed how culture impacts economic outcomes (Also written before AI).",
     long: "Studied the roles of Hofstede and GLOBE cultural dimensions (e.g., power distance, individualism) on global competitiveness. Added regional insights by comparing corruption's effect on Northern vs. Southern Italy investments."
   },
   {
@@ -73,7 +73,7 @@ export const projectsData = [
   },
   {
     emoji: "🧠",
-    title: "Analyst – ECS, Joint AI Center (JAIC)",
+    title: "Analyst – ECS Federal (#1 government provider of AI at the time)",
     location: "Washington, DC",
     dates: "May 2021 – Jul 2022",
     short: "Improved predictive maintenance for military aircraft using ML.",
@@ -125,7 +125,7 @@ export const projectsData = [
     location: "West Point, NY",
     dates: "Aug 2019 – May 2021",
     short: "Created newsletters, participated in global policy trips, and edited content.",
-    long: "I curated and disseminated global affairs insights, led publication cycles, and participated in high-level civil-military dialogue. Highlights include meeting Lester Holt at NBC Studios and analyzing Canadian civil-military frameworks. This deepened my understanding of media responsibility, soft power, and international policy."
+    long: "I curated and disseminated global affairs insights, led publication cycles, and participated in high-level civil-military dialogue. Highlights include meeting Lester Holt at NBC Studios to discuss the challenges of productive reporting and a visit to Ottowa, Canada on Remembrance Day to meet with their military leaders. This deepened my understanding of media responsibility, soft power, and international policy."
   },
   {
     emoji: "🎖️",
