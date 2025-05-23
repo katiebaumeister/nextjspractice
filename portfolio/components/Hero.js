@@ -17,12 +17,12 @@ export default function Hero() {
         Kate Baumeister
       </motion.h1>
       <p className="mt-8 text-sm sm:text-base text-neutral-400 max-w-md">
-        I build apps for the government. Spending evenings building <br />
+        I build apps for the government. Spending evenings developing <br />
         <a
           href="https://learnadoodle.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:underline transition"
+          className="text-white-400 hover:underline transition"
         >
           learnadoodle.com
         </a>.
