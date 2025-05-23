@@ -1,4 +1,3 @@
-// components/Hero.js
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -19,7 +18,14 @@ export default function Hero() {
       </motion.h1>
       <p className="mt-8 text-sm sm:text-base text-neutral-400 max-w-md">
         I build apps for the government. Spending evenings building <br />
-        learnadoodle.com.
+        <a
+          href="https://learnadoodle.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:underline transition"
+        >
+          learnadoodle.com
+        </a>.
       </p>
     </section>
   );
