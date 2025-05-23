@@ -4,7 +4,7 @@ export default function Connect() {
   return (
     <section className="py-32 px-4 border-t border-neutral-800">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-5xl sm:text-6xl font-bold mb-8">Let’s Connect</h2>
+        <h2 className="text-4xl sm:text-5xl font-bold mb-8">Let’s Connect</h2>
 
         <div className="flex justify-center space-x-8 mb-12 text-4xl text-white">
           <a
@@ -33,7 +33,7 @@ export default function Connect() {
           </a>
         </div>
 
-        <p className="text-xl sm:text-2xl text-neutral-400">
+        <p className="text-large sm:text-2xl text-neutral-400">
           Email me:{' '}
           <a
             href="mailto:kate@learnadoodle.com"
