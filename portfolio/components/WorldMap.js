@@ -3,6 +3,7 @@ import L from 'leaflet';
 import { useEffect } from 'react';
 import 'leaflet/dist/leaflet.css';
 
+// Fix leaflet's default marker icon paths
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: typeof window !== 'undefined' && require('leaflet/dist/images/marker-icon-2x.png'),
@@ -83,8 +84,8 @@ export default function WorldMap() {
     <div className="w-full h-[600px] rounded-xl overflow-hidden shadow-xl">
       <MapContainer center={[20, 0]} zoom={2} scrollWheelZoom={true} style={{ height: '100%', width: '100%' }}>
         <TileLayer
-          attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {locations.map((loc, i) => (
           <Marker key={i} position={loc.position}>
@@ -92,7 +93,6 @@ export default function WorldMap() {
               <strong>{loc.title}</strong><br />
               {loc.description}
             </Popup>
-            {/* Fly animation staggered per marker */}
             <FlyToMarker position={loc.position} delay={i * 3000} />
           </Marker>
         ))}
