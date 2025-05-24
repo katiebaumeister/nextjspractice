@@ -37,19 +37,19 @@ export const positionsAndExperiencesData = [
     location: "New York, New York",
     dates: "May – Jul 2023",
     short: "Supported M&A strategy and product innovation.",
-    long: "Worked closely with senior leadership on acquisition targets and market growth. My competitive landscape analyses informed executive decisions and long-term global strategy."
+    long: "Worked closely with senior leadership on acquisition targets and market growth focusing on enhacing current capabilities with global opportunities."
   },
   {
     emoji: "🎥",
     title: "Strategy Lead for Local Cinema Brand",
     location: "Columbia, South Carolina",
     dates: "Jan – May 2023",
-    short: "Led branding and outreach for a regional film initiative.",
-    long: "Created a strategic plan leveraging merchandise, partnerships, and social media to increase visibility and secure a $100K local government grant. Built a bridge between cultural growth and economic policy through storytelling."
+    short: "Led branding and outreach strategy for a regional film initiative.",
+    long: "Local Cinema Studios is a small-scale production company supported by a $100K annual grant from the City of Columbia to attract creative talent to the region. My team and I analyzed industry trends and local priorities to advise how the studio could strategically invest the grant — balancing cultural impact, visibility, and long-term growth."
   },
   {
     emoji: "🧠",
-    title: "Analyst – ECS, Joint AI Center (JAIC)",
+    title: "Analyst – ECS Federal (previously #1 provider of AI solutions to the government)",
     location: "Washington, DC",
     dates: "May 2021 – Jul 2022",
     short: "Improved predictive maintenance for military aircraft using ML.",
@@ -77,15 +77,15 @@ export const positionsAndExperiencesData = [
     location: "West Point, New York",
     dates: "Jan – May 2020",
     short: "Founded “Run for Resources” to humanize campus reporting systems.",
-    long: "I designed a campus-wide initiative to demystify and destigmatize crisis reporting. By pairing physical activity with open discussions, we transformed impersonal systems into approachable support pathways — reinforcing community and trust."
+    long: "I started a company initiative to demystify and destigmatize crisis reporting. By pairing physical activity with open discussions, we transformed impersonal systems into approachable support pathways — reinforcing community and trust."
   },
   {
     emoji: "📰",
     title: "Editor – Domestic Affairs Forum",
     location: "West Point, New York",
     dates: "Aug 2019 – May 2021",
-    short: "Created newsletters, participated in global policy trips, and edited content.",
-    long: "I curated and disseminated global affairs insights, led publication cycles, and participated in high-level civil-military dialogue."
+    short: "Stayed engaged in global policy; led monthly newsletters and member highlights.",
+    long: "I curated and shared global affairs insights through monthly newsletters, spotlighting how members were driving impact. Highlights included a roundtable with Lester Holt at NBC Studios in New York and informal policy discussions with senior military leaders in Ottawa, Canada."
   },
   {
     emoji: "🎖️",
