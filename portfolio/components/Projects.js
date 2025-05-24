@@ -21,16 +21,20 @@ export default function Projects() {
 
   const handleTabChange = (key) => {
     setTab(key);
-    router.replace({
-      pathname: router.pathname,
-      query: { tab: key },
-    }, undefined, { shallow: true });
+    router.replace(
+      {
+        pathname: router.pathname,
+        query: { tab: key },
+      },
+      undefined,
+      { shallow: true }
+    );
   };
 
   const data = tab === 'contributions' ? contributionsData : experiencesData;
 
   return (
-    <div className="z-10 relative px-4 sm:px-12 py-24 max-w-4xl mx-auto">
+    <div className="z-10 relative px-4 sm:px-12 py-24 max-w-5xl mx-auto">
       <div className="flex overflow-x-auto sm:justify-center space-x-4 mb-10 no-scrollbar">
         {tabs.map(({ key, label }) => (
           <button
@@ -45,9 +49,12 @@ export default function Projects() {
         ))}
       </div>
 
-      <ul className="space-y-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 auto-rows-[minmax(150px,auto)]">
         {data.map((item, i) => (
-          <li key={i} className="bg-neutral-900 p-6 rounded-xl shadow-md border border-neutral-800">
+          <div
+            key={i}
+            className="bg-neutral-900 p-6 rounded-xl shadow border border-neutral-800 flex flex-col justify-between h-full"
+          >
             <div className="flex justify-between items-center mb-2">
               <span className="text-xl">{item.emoji}</span>
               <span className="text-sm text-neutral-400">{item.dates}</span>
@@ -56,10 +63,9 @@ export default function Projects() {
             <p className="italic text-sm text-neutral-400">{item.location}</p>
             <p className="mt-2 font-medium">{item.short}</p>
             <p className="mt-1 text-sm text-neutral-300">{item.long}</p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
-
