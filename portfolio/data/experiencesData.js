@@ -33,11 +33,11 @@ export const positionsAndExperiencesData = [
   },
   {
     emoji: "🧩",
-    title: "Corporate Development Intern for Everest Insurance®",
+    title: "Corporate Development Intern for Everest Re Group",
     location: "New York, New York",
     dates: "May – Jul 2023",
     short: "Supported M&A strategy and product innovation.",
-    long: "Worked closely with senior leadership on acquisition targets and market growth focusing on enhacing current capabilities with global opportunities."
+    long: "Worked closely with senior leadership on acquisition targets and market growth specificially in international M&A."
   },
   {
     emoji: "🎥",
@@ -77,7 +77,7 @@ export const positionsAndExperiencesData = [
     location: "West Point, New York",
     dates: "Jan – May 2020",
     short: "Founded “Run for Resources” to humanize campus reporting systems.",
-    long: "I started a company initiative to demystify and destigmatize crisis reporting. By pairing physical activity with open discussions, we transformed impersonal systems into approachable support pathways — reinforcing community and trust."
+    long: "I started a company initiative to demystify and destigmatize crisis reporting. There are a lot of great resources at West Point, but they are top-down and inperceptible. This made things a bit more human."
   },
   {
     emoji: "📰",
