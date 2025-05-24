@@ -1,31 +1,48 @@
-// components/Projects.js
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { contributionsData } from '../data/contributionsData';
 import { experiencesData } from '../data/experiencesData';
 
+const tabs = [
+  { key: 'contributions', label: '🛠️ Contributions' },
+  { key: 'experiences', label: '💼 Experiences' },
+];
+
 export default function Projects() {
+  const router = useRouter();
   const [tab, setTab] = useState('contributions');
+
+  useEffect(() => {
+    const urlTab = router.query.tab;
+    if (urlTab === 'experiences' || urlTab === 'contributions') {
+      setTab(urlTab);
+    }
+  }, [router.query.tab]);
+
+  const handleTabChange = (key) => {
+    setTab(key);
+    router.replace({
+      pathname: router.pathname,
+      query: { tab: key },
+    }, undefined, { shallow: true });
+  };
+
   const data = tab === 'contributions' ? contributionsData : experiencesData;
 
   return (
     <div className="z-10 relative px-4 sm:px-12 py-24 max-w-4xl mx-auto">
-      <div className="flex justify-center space-x-4 mb-10">
-        <button
-          onClick={() => setTab('contributions')}
-          className={`px-4 py-2 rounded-full font-semibold text-sm ${
-            tab === 'contributions' ? 'bg-white text-black' : 'bg-neutral-800 text-white'
-          }`}
-        >
-          🛠️ Contributions
-        </button>
-        <button
-          onClick={() => setTab('experiences')}
-          className={`px-4 py-2 rounded-full font-semibold text-sm ${
-            tab === 'experiences' ? 'bg-white text-black' : 'bg-neutral-800 text-white'
-          }`}
-        >
-          💼 Experiences
-        </button>
+      <div className="flex overflow-x-auto sm:justify-center space-x-4 mb-10 no-scrollbar">
+        {tabs.map(({ key, label }) => (
+          <button
+            key={key}
+            onClick={() => handleTabChange(key)}
+            className={`whitespace-nowrap flex-shrink-0 px-4 py-2 rounded-full font-semibold text-sm transition ${
+              tab === key ? 'bg-white text-black' : 'bg-neutral-800 text-white'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
       </div>
 
       <ul className="space-y-8">
@@ -45,3 +62,4 @@ export default function Projects() {
     </div>
   );
 }
+
