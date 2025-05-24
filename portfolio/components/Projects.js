@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { contributionsData } from '../data/contributionsData';
-import { experiencesData } from '../data/experiencesData';
+import { projectsAndResearchData } from '../data/contributionsData';
+import { positionsAndExperiencesData } from '../data/experiencesData';
 
 const tabs = [
   { key: 'contributions', label: '🛠️ Contributions' },
@@ -31,7 +31,7 @@ export default function Projects() {
     );
   };
 
-  const data = tab === 'contributions' ? contributionsData : experiencesData;
+  const data = tab === 'contributions' ? projectsAndResearchData : positionsAndExperiencesData;
 
   return (
     <div className="z-10 relative px-4 sm:px-12 py-24 max-w-5xl mx-auto">
