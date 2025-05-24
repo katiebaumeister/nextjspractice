@@ -1,17 +1,18 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { useEffect } from 'react';
+import { useRef } from 'react';
 import 'leaflet/dist/leaflet.css';
 
-// Fix leaflet's default marker icon paths
-delete L.Icon.Default.prototype._getIconUrl;
+// Fix default Leaflet marker icons (Vercel-safe)
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
 L.Icon.Default.mergeOptions({
-  iconRetinaUrl: typeof window !== 'undefined' && require('leaflet/dist/images/marker-icon-2x.png'),
-  iconUrl: typeof window !== 'undefined' && require('leaflet/dist/images/marker-icon.png'),
-  shadowUrl: typeof window !== 'undefined' && require('leaflet/dist/images/marker-shadow.png'),
+  iconUrl: icon.src || icon,
+  shadowUrl: iconShadow.src || iconShadow,
 });
 
-// Your location data
+// Location data
 const locations = [
   {
     title: 'Anchorage, AK',
@@ -21,27 +22,27 @@ const locations = [
   {
     title: 'West Point, NY',
     position: [41.3911, -73.9636],
-    description: 'My baby years while my dad was a professor — and later, the source of many great leadership experiences and rolling around in the mud. [2000-2002, 2017-2021]',
+    description: 'The source of many great leadership experiences. This is also where my parents met back in 1992! [2000-2002, 2017-2021]',
   },
   {
     title: 'Fort Leavenworth, KS',
     position: [39.3529, -94.9225],
-    description: 'Where I graduated kindergarten. [2004]',
+    description: 'Where I graduated kindergarten, awh... [2004]',
   },
   {
     title: 'Leesburg, VA',
     position: [39.1157, -77.5636],
-    description: 'Spent my 4th grade year here. [2009]',
+    description: 'My 4th grade year. [2009]',
   },
   {
     title: 'Fayetteville, NC',
     position: [35.0527, -78.8784],
-    description: '1st through 12th grade — public school foundation. [2004-2008, 2009-2017]',
+    description: 'My 1st through 12th grade public school education. [2004-2008, 2009-2017]',
   },
   {
     title: 'Columbia, SC',
     position: [34.0007, -81.0348],
-    description: 'So many research projects, my favorite being the religious economy, and significant time spent building a global investment analytic algorithm. [2022-2024]',
+    description: 'Where I spent significant time building a global investment analytic algorithm and attending business school. [2022-2024]',
   },
   {
     title: 'Paris, France',
@@ -63,20 +64,29 @@ const locations = [
     position: [46.6331, 8.5946],
     description: 'Annual New Year’s Eve family ski trip destination.',
   },
+  {
+  title: 'Charleston, SC',
+  position: [32.7765, -79.9311],
+  description: 'The hometown where my fam resides and I frequent.',
+},
 ];
 
-// Component to fly to a marker on mount
-function FlyToMarker({ position, delay }) {
+// Click-to-zoom component
+function ZoomTo({ mapRef, position }) {
   const map = useMap();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      map.flyTo(position, 5, { duration: 2 });
-    }, delay);
-    return () => clearTimeout(timeout);
-  }, [map, position, delay]);
+  const handleClick = () => {
+    map.setView(position, 6); // Zoom to city/state level
+  };
 
-  return null;
+  return (
+    <Marker position={position} eventHandlers={{ click: handleClick }}>
+      <Popup>
+        <strong>{mapRef.current.title}</strong><br />
+        {mapRef.current.description}
+      </Popup>
+    </Marker>
+  );
 }
 
 export default function WorldMap() {
@@ -87,15 +97,22 @@ export default function WorldMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {locations.map((loc, i) => (
-          <Marker key={i} position={loc.position}>
-            <Popup>
-              <strong>{loc.title}</strong><br />
-              {loc.description}
-            </Popup>
-            <FlyToMarker position={loc.position} delay={i * 3000} />
-          </Marker>
-        ))}
+        {locations.map((loc, i) => {
+          const markerRef = useRef(loc);
+          return (
+            <Marker key={i} position={loc.position} eventHandlers={{
+              click: () => {
+                const map = markerRef.current._map;
+                map.setView(loc.position, 6);
+              }
+            }}>
+              <Popup>
+                <strong>{loc.title}</strong><br />
+                {loc.description}
+              </Popup>
+            </Marker>
+          );
+        })}
       </MapContainer>
     </div>
   );
