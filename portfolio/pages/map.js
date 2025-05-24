@@ -19,14 +19,39 @@ export default function MapPage() {
       <Head>
         <title>Journey – Kate Baumeister</title>
       </Head>
-      <main className="min-h-screen bg-neutral-950 text-white p-6 sm:p-12">
-        <div className="flex items-center justify-between mb-6 max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold">Oh, the places you'll go!</h1>
-          <Link href="/" className="text-neutral-400 hover:text-white transition">
+
+      <main className="min-h-screen bg-neutral-950 text-white px-4 sm:px-8 pb-12">
+        {/* Top Nav */}
+        <div className="max-w-5xl mx-auto pt-6 flex justify-between items-center">
+          <Link
+            href="/"
+            className="text-neutral-400 hover:text-white transition text-sm sm:text-base"
+          >
             ← Back to Home
           </Link>
+
+          <div className="flex gap-8 text-sm sm:text-base font-medium text-neutral-400">
+            <Link href="/projects" className="hover:text-white transition">Projects</Link>
+            <Link href="/contact" className="hover:text-white transition">Contact</Link>
+          </div>
         </div>
-        <WorldMap />
+
+        {/* Title */}
+        <div className="max-w-5xl mx-auto mt-10 mb-6 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-3xl sm:text-5xl font-extrabold tracking-tight"
+          >
+            Oh, the places you'll go!
+          </motion.h1>
+        </div>
+
+        {/* Map */}
+        <div className="max-w-6xl mx-auto">
+          <WorldMap />
+        </div>
       </main>
     </>
   );
