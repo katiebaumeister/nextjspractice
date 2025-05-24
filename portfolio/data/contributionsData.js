@@ -37,7 +37,7 @@ export const projectsAndResearchData = [
     location: "Columbia, South Carolina",
     dates: "Apr 2022 – Apr 2024",
     short: "Extracted thousands of messy files from Refinitiv then built script in Stata to clean and organize for Python ingestion",
-    long: "I processed thousands of disparate datasets from archived Refinitiv data 1962-2023, creating a structured dataset with all investments by country and year, tagged with data such as round number, investment stage, and deal vallue."
+    long: "rocessed thousands of disparate datasets from archived Refinitiv data 1962-2023, creating a structured dataset with all investments by country and year, tagged with data such as round number, investment stage, and deal vallue."
   },
   {
     emoji: "🏥",
@@ -45,7 +45,7 @@ export const projectsAndResearchData = [
     location: "Columbia, South Carolina",
     dates: "Apr 2022 – Apr 2024",
     short: "Cleaned and structured massive datasets for global health investment trends.",
-    long: "I wrote an Excel Macro to loop through thousands of files and compile data into a single large dataset. This was for the purpose of comparing Refinitiv data with enterprise investment data (including project team, project industry, type of product, etc). My work exposed which factors contributed most to a successful investment across the investor small teams."
+    long: "Wrote an Excel Macro to loop through thousands of files and compile data into a single large dataset. This was for the purpose of comparing Refinitiv data with enterprise investment data (including project team, project industry, type of product, etc). My work exposed which factors contributed most to a successful investment across the investor small teams."
   },
   {
     emoji: "👾",
