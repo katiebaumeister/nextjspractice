@@ -5,9 +5,17 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
       <div className="mb-10 flex flex-wrap justify-center space-x-8 text-sm sm:text-base font-medium text-neutral-400">
-        <Link href="/projects" className="hover:text-white transition duration-200">Projects</Link>
-        <Link href="/contact" className="hover:text-white transition duration-200">Contact</Link>
+        <Link href="/projects" className="hover:text-white transition duration-200">
+          Projects
+        </Link>
+        <Link href="/map" className="hover:text-white transition duration-200">
+          Journey
+        </Link>
+        <Link href="/contact" className="hover:text-white transition duration-200">
+          Contact
+        </Link>
       </div>
+
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -16,8 +24,9 @@ export default function Hero() {
       >
         Kate Baumeister
       </motion.h1>
+
       <p className="mt-8 text-sm sm:text-base text-neutral-400 max-w-md">
-        I build software for the government by day, and develop <br />
+        I build apps for the government. Spending evenings building <br />
         <a
           href="https://learnadoodle.com"
           target="_blank"
@@ -25,7 +34,7 @@ export default function Hero() {
           className="text-white hover:underline transition"
         >
           Learnadoodle.com
-        </a> by night.
+        </a>
       </p>
     </section>
   );
