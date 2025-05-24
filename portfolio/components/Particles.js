@@ -1,6 +1,8 @@
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
 
+import React, { useEffect, useMemo, useState } from "react";
+
+// Hook to track mouse position
 export function useMousePosition() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -9,43 +11,44 @@ export function useMousePosition() {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   return mousePosition;
 }
 
 export default function Particles() {
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const { x, y } = useMousePosition();
 
+  // Capture initial window size once
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
   }, []);
 
-  const dots = new Array(40).fill(0);
+  // Generate random positions once per dot
+  const dotPositions = useMemo(() => {
+    return new Array(40).fill(0).map(() => ({
+      left: Math.random(),  // percentage of width
+      top: Math.random(),   // percentage of height
+    }));
+  }, []);
 
-  if (!windowWidth || !windowHeight) return null;
+  if (!windowSize.width || !windowSize.height) return null;
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {dots.map((_, i) => {
-        const left = Math.random() * windowWidth;
-        const top = Math.random() * windowHeight;
-        return (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full opacity-10 w-[2px] h-[2px] animate-pulse"
-            style={{
-              left: `${(left + x * 0.05) % windowWidth}px`,
-              top: `${(top + y * 0.05) % windowHeight}px`,
-            }}
-          />
-        );
-      })}
+      {dotPositions.map(({ left, top }, i) => (
+        <div
+          key={i}
+          className="absolute bg-white rounded-full opacity-10 w-[2px] h-[2px] animate-pulse"
+          style={{
+            left: `${(left * windowSize.width + x * 0.05) % windowSize.width}px`,
+            top: `${(top * windowSize.height + y * 0.05) % windowSize.height}px`,
+          }}
+        />
+      ))}
     </div>
   );
 }
