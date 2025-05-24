@@ -15,47 +15,47 @@ const locations = [
   {
     title: 'Anchorage, AK',
     position: [61.2181, -149.9003],
-    description: 'My birthplace.',
+    description: 'My birthplace. [1999]',
   },
   {
     title: 'West Point, NY',
     position: [41.3911, -73.9636],
-    description: 'My baby years — and later, many great leadership experiences and research projects (plus rolling around in the mud).',
+    description: 'My baby years while my dad was a professor — and later, the source of many great leadership experiences and rolling around in the mud. [2000-2002, 2017-2021]',
   },
   {
     title: 'Fort Leavenworth, KS',
     position: [39.3529, -94.9225],
-    description: 'Where I graduated kindergarten.',
+    description: 'Where I graduated kindergarten. [2004]',
   },
   {
     title: 'Leesburg, VA',
     position: [39.1157, -77.5636],
-    description: 'Spent my 4th grade year here.',
+    description: 'Spent my 4th grade year here. [2009]',
   },
   {
     title: 'Fayetteville, NC',
     position: [35.0527, -78.8784],
-    description: '1st through 12th grade — public school foundation.',
+    description: '1st through 12th grade — public school foundation. [2004-2008, 2009-2017]',
   },
   {
     title: 'Columbia, SC',
     position: [34.0007, -81.0348],
-    description: 'So many research projects, my favorite being the religious economy, and significant time spent building a global investment analytic algorithm.',
+    description: 'So many research projects, my favorite being the religious economy, and significant time spent building a global investment analytic algorithm. [2022-2024]',
   },
   {
     title: 'Paris, France',
     position: [48.8566, 2.3522],
-    description: 'Studied international business at ESCP in early 2024.',
+    description: 'Studied international business at ESCP in early 2024. [January-March 2024]',
   },
   {
     title: 'Hohenfels, Germany',
     position: [49.2057, 11.8434],
-    description: 'NATO leadership training at JMRC.',
+    description: 'NATO leadership training at JMRC. [May-July 2019]',
   },
   {
     title: 'Washington, DC',
     position: [38.9072, -77.0369],
-    description: 'App Developer for the government.',
+    description: 'App Developer for the government. [2021-2022, 2024-2025]',
   },
   {
     title: 'Andermatt, Switzerland',
