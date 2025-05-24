@@ -1,93 +1,111 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import L from 'leaflet';
-import { useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import markerIconBlue from 'leaflet/dist/images/marker-icon.png';
+import markerIconRed from 'leaflet/dist/images/marker-icon-2x.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
-// Fix default Leaflet marker icons (Vercel-safe)
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+// Define different marker icons by group
+const iconStyles = {
+  early: L.icon({
+    iconUrl: markerIconBlue.src || markerIconBlue,
+    shadowUrl: markerShadow.src || markerShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  }),
+  professional: L.icon({
+    iconUrl: markerIconRed.src || markerIconRed,
+    shadowUrl: markerShadow.src || markerShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
+  }),
+};
 
-L.Icon.Default.mergeOptions({
-  iconUrl: icon.src || icon,
-  shadowUrl: iconShadow.src || iconShadow,
-});
-
-// Location data
+// 🗺️ Grouped + categorized locations
 const locations = [
   {
+    group: 'early',
     title: 'Anchorage, AK',
     position: [61.2181, -149.9003],
     description: 'My birthplace. [1999]',
   },
   {
+    group: 'early',
     title: 'West Point, NY',
     position: [41.3911, -73.9636],
-    description: 'The source of many great leadership experiences. This is also where my parents met back in 1992! [2000-2002, 2017-2021]',
+    description: 'Early years and later leadership experiences. [2000-2002, 2017-2021]',
   },
   {
+    group: 'early',
     title: 'Fort Leavenworth, KS',
     position: [39.3529, -94.9225],
-    description: 'Where I graduated kindergarten, awh... [2004]',
+    description: 'Graduated kindergarten. [2004]',
   },
   {
+    group: 'early',
     title: 'Leesburg, VA',
     position: [39.1157, -77.5636],
-    description: 'My 4th grade year. [2009]',
+    description: 'Spent my 4th grade year here. [2009]',
   },
   {
+    group: 'early',
     title: 'Fayetteville, NC',
     position: [35.0527, -78.8784],
-    description: 'My 1st through 12th grade public school education. [2004-2008, 2009-2017]',
+    description: '1st through 12th grade — public school foundation. [2004-2017]',
   },
   {
+    group: 'education',
     title: 'Columbia, SC',
     position: [34.0007, -81.0348],
-    description: 'Where I spent significant time building a global investment analytic algorithm and attending business school. [2022-2024]',
+    description: 'Research projects and MBA studies. [2022-2024]',
   },
   {
-    title: 'Paris, France',
-    position: [48.8566, 2.3522],
-    description: 'Studied international business at ESCP in early 2024. [January-March 2024]',
+    group: 'professional',
+    title: 'Charleston, SC',
+    position: [32.7765, -79.9311],
+    description: 'Current hometown. [2025]',
   },
   {
-    title: 'Hohenfels, Germany',
-    position: [49.2057, 11.8434],
-    description: 'NATO leadership training at JMRC. [May-July 2019]',
-  },
-  {
+    group: 'professional',
     title: 'Washington, DC',
     position: [38.9072, -77.0369],
-    description: 'App Developer for the government. [2021-2022, 2024-2025]',
+    description: 'Government app developer. [2021-2022, 2024-2025]',
   },
   {
+    group: 'professional',
+    title: 'New York, NY',
+    position: [40.7128, -74.0060],
+    description: 'Corporate Development Intern at Everest. [Summer 2023]',
+  },
+  {
+    group: 'education',
+    title: 'Ottawa, Canada',
+    position: [45.4215, -75.6998],
+    description: 'Domestic Affairs Forum policy meetings. [2019]',
+  },
+  {
+    group: 'education',
+    title: 'Paris, France',
+    position: [48.8566, 2.3522],
+    description: 'Studied at ESCP. [Jan–Mar 2024]',
+  },
+  {
+    group: 'education',
+    title: 'Hohenfels, Germany',
+    position: [49.2057, 11.8434],
+    description: 'NATO leadership training. [2019]',
+  },
+  {
+    group: 'travel',
     title: 'Andermatt, Switzerland',
     position: [46.6331, 8.5946],
-    description: 'Annual New Year’s Eve family ski trip destination.',
+    description: 'New Year ski trips.',
   },
-  {
-  title: 'Charleston, SC',
-  position: [32.7765, -79.9311],
-  description: 'The hometown where my fam resides and I frequent.',
-},
 ];
-
-// Click-to-zoom component
-function ZoomTo({ mapRef, position }) {
-  const map = useMap();
-
-  const handleClick = () => {
-    map.setView(position, 6); // Zoom to city/state level
-  };
-
-  return (
-    <Marker position={position} eventHandlers={{ click: handleClick }}>
-      <Popup>
-        <strong>{mapRef.current.title}</strong><br />
-        {mapRef.current.description}
-      </Popup>
-    </Marker>
-  );
-}
 
 export default function WorldMap() {
   return (
@@ -97,22 +115,18 @@ export default function WorldMap() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {locations.map((loc, i) => {
-          const markerRef = useRef(loc);
-          return (
-            <Marker key={i} position={loc.position} eventHandlers={{
-              click: () => {
-                const map = markerRef.current._map;
-                map.setView(loc.position, 6);
-              }
-            }}>
-              <Popup>
-                <strong>{loc.title}</strong><br />
-                {loc.description}
-              </Popup>
-            </Marker>
-          );
-        })}
+
+        {locations.map((loc, i) => (
+          <Marker
+            key={i}
+            position={loc.position}
+            icon={iconStyles[loc.group] || iconStyles.professional}
+          >
+            <Tooltip direction="top" offset={[0, -10]} opacity={1} permanent>
+              <span className="font-semibold">{loc.title}</span>
+            </Tooltip>
+          </Marker>
+        ))}
       </MapContainer>
     </div>
   );
