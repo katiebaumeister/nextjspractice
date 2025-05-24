@@ -21,7 +21,7 @@ export default function MapPage() {
       </Head>
       <main className="min-h-screen bg-neutral-950 text-white p-6 sm:p-12">
         <div className="flex items-center justify-between mb-6 max-w-5xl mx-auto">
-          <h1 className="text-3xl font-bold">🧭 My Journey</h1>
+          <h1 className="text-3xl font-bold">Oh, the places you'll go!</h1>
           <Link href="/" className="text-neutral-400 hover:text-white transition">
             ← Back to Home
           </Link>
