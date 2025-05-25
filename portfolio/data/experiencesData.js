@@ -116,7 +116,7 @@ export const positionsAndExperiencesData = [
     title: "Member & Instructor – West Point Ski Patrol",
     location: "West Point, NY",
     dates: "Aug 2017 – May 2020",
-    short: "Provided first aid during athletic events and taught emergency care.",
-    long: "Certified in Outdoor Emergency Care, I gained hands-on medical and leadership experience. As an instructor, I led a six-month training program. The role taught me how to teach under pressure, communicate clearly, and respond with empathy in crisis situations."
+    short: "Provided first aid on and off the mountain.",
+    long: "Certified in Outdoor Emergency Care, I volunteered at various events, taught new patrollers, and in winter, spent 7 days a week on the mountain."
   }
 ];
