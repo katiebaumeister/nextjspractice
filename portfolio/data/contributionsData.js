@@ -12,7 +12,7 @@ export const projectsAndResearchData = [
     title: "\"Unprecedented Transnational Growth and Rampant Capitalism within the Religious Economy\"",
     location: "Columbia, South Carolina",
     dates: "Feb 2023",
-    short: "Written before AI.",
+    short: "Revealed aspects of the religious economy.",
     long: "Abstract: This essay analyzes how the bait-and-switch organization centered around a fear-inducing-evil-galactic-overlord, Xenu, his spacecraft, and exploding volcanoes manages to overcome dozens of external imperatives including litigations for extortion, coercion, tax evasion, and falsification of records..."
   },
   {
@@ -20,13 +20,13 @@ export const projectsAndResearchData = [
     title: "Research on Switzerland Global Competitiveness",
     location: "Columbia, South Carolina",
     dates: "Oct 2022",
-    short: "Analyzed how culture impacts economic outcomes (also written before AI).",
+    short: "Analyzed how culture impacts economic outcomes.",
     long: "Studied the roles of Hofstede and GLOBE cultural dimensions (e.g., power distance, individualism) on global competitiveness. Added regional insights by comparing corruption's effect on Northern vs. Southern Italy investments."
   },
   {
     emoji: "🌐",
     title: "Automated file converter (PowerShell)",
-    location: "Columbia, South Carolina",
+    location: "Washington, DC",
     dates: "Dec 2022",
     short: "Developed a script to convert hundreds of PowerPoint files into PDFs.",
     long: "Saved hours for my team and avoided an Adobe subscription by runnning an automation over all .ppt files in a folder."
@@ -36,12 +36,12 @@ export const projectsAndResearchData = [
     title: "Data cleansing algorithm (Stata)",
     location: "Columbia, South Carolina",
     dates: "Apr 2022 – Apr 2024",
-    short: "Extracted thousands of messy files from Refinitiv then built script in Stata to clean and organize for Python ingestion",
-    long: "rocessed thousands of disparate datasets from archived Refinitiv data 1962-2023, creating a structured dataset with all investments by country and year, tagged with data such as round number, investment stage, and deal vallue."
+    short: "Extracted thousands of messy files from Refinitiv then built script in Stata to clean and organize for Python ingestion.",
+    long: "Processed thousands of disparate datasets from archived Refinitiv data 1962-2023, creating a structured dataset with all investments by country and year, tagged with data such as round number, investment stage, and deal vallue."
   },
   {
     emoji: "🏥",
-    title: "Global health investment algorithm (Excel Macros)",
+    title: "Global health investment file loop (Excel Macros)",
     location: "Columbia, South Carolina",
     dates: "Apr 2022 – Apr 2024",
     short: "Cleaned and structured massive datasets for global health investment trends.",
